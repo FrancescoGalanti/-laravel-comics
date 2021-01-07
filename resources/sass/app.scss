@@ -1,7 +1,10 @@
 // GLOBALS
 @import 'partial/global';
 // PAGE
-@import 'partial/utilities'
+@import 'partial/utilities';
 // SECTIONS / COMPONENTS
+@import 'partial/general-hero';
+
+@import 'partial/comic-list.scss';
 
 // WIDGET
