@@ -18,7 +18,7 @@
                    @foreach($comics as $item)
                       <li>
                           <a href="">
-                            <img src="{{$item['image']}}" alt="{{$item['title']}">
+                            <img src="{{$item['image']}}" alt="{{$item['title']}}">
                             <h3>{{$item['title']}}</h3>
                           </a>
                       </li>          
