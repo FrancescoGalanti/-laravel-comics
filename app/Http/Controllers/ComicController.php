@@ -13,11 +13,15 @@ class ComicController extends Controller
 
         $comic = [];
 
-        foreach($comics as $item){
+       /*  foreach($comics as $item){
             if($item['id'] == $id){
                 $comic = $item;
             }
         }
+ */
+        $comic = collect($comics)->firstWhere('id', $id);
+
+        
 
 
         return view('comics/comic-detail', compact('comic'));
