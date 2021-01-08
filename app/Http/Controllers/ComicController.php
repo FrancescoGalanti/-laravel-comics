@@ -18,5 +18,8 @@ class ComicController extends Controller
                 $comic = $item;
             }
         }
+
+
+        return view('comic-detail', compact('comic'));
     }
 }
