@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     }
 
-    dd($comics);
+    /* dd($comics); */
 
        return view('home', compact('comics'));
     }
