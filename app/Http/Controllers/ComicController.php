@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class ComicController extends Controller
 {
-    public function show($id)
+    public function show($slug)
     
     {
         $comics = config('comic');
@@ -18,20 +18,24 @@ class ComicController extends Controller
             if($item['id'] == $id){
                 $comic = $item;
             }
-        } */
-
+        }
+ */
         foreach($comics as $item){
-            $titleConverted = $slug = Str::slug($item['title'], '-');
+            $titleConverted =  Str::slug($item['title'], '-');
             if($slug ==  $titleConverted){
                 $comic = $item;
                 break;
             }
         }
+        // error page
+        if(empty($comic)){
+          abort(404);
+        }
 
        /*  $comic = collect($comics)->firstWhere('id', $id); */
 
-        
-        dd($comic);
+        /* 
+        dd($comic); */
 
 
         return view('comics/comic-detail', compact('comic'));
